@@ -287,3 +287,31 @@ code {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
 }
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .hero__inner,
+  .about,
+  .featured__grid { grid-template-columns: 1fr; }
+
+  .hero__photo { order: -1; }
+  .hero { padding-top: 50px; }
+  .avatar { width: 220px; }
+  .avatar__initials { font-size: 3.6rem; }
+}
+
+@media (max-width: 640px) {
+  .header__inner { height: auto; flex-direction: column; padding: 10px 0; gap: 4px; }
+  .nav { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .nav a { font-size: 0.85rem; }
+  html { scroll-padding-top: 110px; }
+  .section { padding: 60px 0; }
+  .hero__stats { gap: 22px; }
+  .featured { padding: 22px; }
+  .timeline__body { padding: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
